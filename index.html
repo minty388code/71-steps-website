@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./71-steps-logo.jpg" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>71 steps template</title>
+    </head>
+    <body class="bg-amber-100">
+        <div x-data="{ open: 1 }" class="font-mono text-center bg-amber-100">
+            <h1 class="flex justify-center items-center text-4xl font-bold py-[1%]">71 steps - Edinbugrh<img src="./71-steps-logo.jpg" alt="71-steps-logo" class="mix-blend-multiply h-14 rounded-lg"></h1>
+            <div class="py-3">
+                <button x-show="open != 1" @click="open = 1" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black rounded-lg">Home</button>
+                <button x-show="open == 1" @click="open = 1" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black rounded-lg">Home</button>
+
+                <button x-show="open != 2" @click="open = 2" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black rounded-lg">Menu</button>
+                <button x-show="open == 2" @click="open = 2" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black rounded-lg">Menu</button>
+
+                <button x-show="open != 3" @click="open = 3" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black rounded-lg">About us</button>
+                <button x-show="open == 3" @click="open = 3" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black rounded-lg">About us</button>
+
+                <button x-show="open != 4" @click="open = 4" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black rounded-lg">Contact</button>
+                <button x-show="open == 4" @click="open = 4" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black rounded-lg">Contact</button>
+            </div>
+            <div>
+                <div x-show="open == 1" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <h1 class="text-3xl font-semibold">Home</h1>
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-1.jpg" alt="Food-example" class="rounded-lg self-center">
+                        <div>
+                            <h1 class="text-4xl font-bold">71 Steps</h1>
+                            <p class="md:pb-0 pb-5">
+                                Description
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dolorum, eligendi in inventore minus pariatur quam quis
+                                rerum voluptates? Culpa deleniti, earum esse fuga impedit
+                                ipsam nostrum pariatur quaerat reprehenderit voluptatem.
+                                <br><br>
+                                // General description here
+                                <br><br>
+                                <button @click="open = 2" class="w-[49%] md:mb-0 mb-1 bg-amber-100 hover:bg-amber-200 border-[3px] border-black py-1 rounded-lg mx-[.1%]">Check out our menu!</button>
+                                <button @click="open = 3" class="w-[49%] bg-amber-100 hover:bg-amber-200 border-[3px] border-black py-1 rounded-lg mx-[.1%]">More about us!</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 2" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <h1 class="text-3xl font-semibold">Menu</h1>
+<!--                    <div class="py-[3%]">-->
+<!--                        <h2 class="text-2xl font-bold">Drinks</h2>-->
+<!--                        <div class="grid grid-cols-3 gap-[3%] px-[3%]">-->
+<!--                            <div>-->
+<!--                                <img src="./drink-1.jpg" alt="Drink-1" class="rounded-md">-->
+<!--                                <h2 class="font-bold">Name</h2>-->
+<!--                                <p>Description</p>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <img src="./drink-2.jpg" alt="Drink-2" class="rounded-md">-->
+<!--                                <h2 class="font-bold">Name</h2>-->
+<!--                                <p>Description</p>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <img src="./drink-3.jpg" alt="Drink-3" class="rounded-md">-->
+<!--                                <h2 class="font-bold">Name</h2>-->
+<!--                                <p>Description</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="py-[3%]">
+                        <h2 class="text-2xl font-bold">Food</h2>
+                        <div class="grid md:grid-cols-3 grid-cols-1 md:gap-[3%] px-[3%]">
+                            <div>
+                                <img src="./food-1.jpg" alt="Food-1" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-2.jpg" alt="Food-2" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-3.jpg" alt="Food-3" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-4.jpg" alt="Food-4" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-5.jpg" alt="Food-5" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-6.jpg" alt="Food-6" class="rounded-md">
+                                <h2 class="font-bold">//Name</h2>
+                                <p>//Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 3" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-3.jpg" alt="Food-example" class="rounded-md self-center">
+                        <div>
+                            <h1 class="text-3xl font-semibold">About us</h1>
+                            <p class="md:pb-0 pb-5">
+                                Description
+                                <br>
+                                (Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab aliquid consequatur deserunt distinctio, eaque facere
+                                hic id, ipsa ipsam quia repellat sapiente soluta tempore
+                                ullam voluptatibus. Enim ipsa ipsum sit.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 4" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-5.jpg" alt="Food-example" class="rounded-md self-center">
+                        <div>
+                            <h1 class="text-3xl font-semibold">Contact</h1>
+                            <address>
+                                71 Steps, 22 Rodney St, Edinburgh EH7 4EA
+                            </address>
+                            <p>example@gmail.com // 123-456-7890 </p>
+                            <p class="py-5">We would like to hear from you, write to us:</p>
+                            <form action="">
+                                <input type="text" placeholder="Name" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <input type="email" placeholder="Email" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <input type="tel" placeholder="Phone" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <textarea class="w-[80%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]"></textarea>
+                                <br>
+                                <input type="submit" class="w-[40%] p-1 rounded-lg border-2 border-black bg-amber-100 hover:bg-amber-200 md:mb-0 mb-6">
+                            </form>
+                        </div>
+                    </div>
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5966.996402753063!2d-3.19623!3d55.962165399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c70051f3beb5%3A0xcb3998b049ed5b10!2sSeventy%20One%20Steps!5e1!3m2!1sen!2suk!4v1715192716665!5m2!1sen!2suk"
+                            class="w-[80%] mx-auto rounded-lg"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="py-[2%]">©2024 71 Steps | Website by <a href="https://georgiy.co.uk/" target="_blank">Georgiy Cherevatenko</a></div>
+        </div>
+    </body>
+</html>
